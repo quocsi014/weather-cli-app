@@ -30,7 +30,7 @@ func (d *Deg)ToCelsius(){
 
 
 func ViewCurrentWeather(city string) {
-	res, err := http.Get(fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", strings.ReplaceAll(city, "_", "%20"), os.Getenv("api_key")))
+	res, err := http.Get(fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", strings.ReplaceAll(city, "_", "%20"), os.Getenv("API_KEY")))
 	if err != nil {
 		fmt.Println("Something went wrong with server, try again pls")
 		return
